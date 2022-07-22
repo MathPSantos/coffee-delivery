@@ -9,6 +9,8 @@ import {
   MoneyIcon,
 } from "../shared/icons";
 
+import expresso from '../assets/drinks/expresso.png'
+
 const PAYMENT_METHODS = [
   {
     id: "credit-card",
@@ -102,7 +104,41 @@ export function Checkout() {
         <div className="col-span-5">
           <h3>Cafés selecionados</h3>
 
-          <div className="bg-gray-100 p-10 rounded-tl-md rounded-tr-[44px] rounded-bl-[44px] rounded-br-md"></div>
+          <div className="mt-4 bg-gray-100 p-10 rounded-tl-md rounded-tr-[44px] rounded-bl-[44px] rounded-br-md">
+            <div className="flex flex-col gap-6">
+              <div className="flex items-start justify-between pb-8 border-b border-b-gray-300 mb-6">
+                <div className="flex items-start gap-5">
+                  <img src={expresso} alt="Café expresso" className="w-[64px]" />
+
+                  <div>
+                    <span className="text-gray-800">Café expresso</span>  
+                  </div>
+                </div>
+
+                <span className="font-bold">R$9,90</span>
+              </div>
+            </div>
+
+            <footer>
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between text-sm">
+                  <span>Total de itens</span>
+                  <span>29.7</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span>Taxa entrega</span>
+                  <span>3.5</span>
+                </div>
+                <div className="flex items-center justify-between text-xl font-bold">
+                  <span>Total</span>
+                  <span>3.5</span>
+                </div>
+              </div>
+
+              <button className="flex items-center justify-center w-full h-[42px] rounded-md bg-yellow-500 text-white uppercase mt-6 font-bold text-sm">Confirmar pedido</button>
+            </footer>
+
+          </div>
         </div>
       </div>
     </main>
