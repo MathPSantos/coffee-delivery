@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-50 text-gray-800 leading-snug;
+  @apply bg-gray-50 text-gray-700 leading-snug;
   -webkit-font-smoothing: antialiased;
 }
 
