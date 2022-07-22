@@ -24,6 +24,10 @@ module.exports = {
           800: "#403937",
           900: "#272221",
         }
+      },
+      fontFamily: {
+        sans: "Roboto, sans-serif",
+        display: "'Baloo 2', cursive",
       }
     },
   },
