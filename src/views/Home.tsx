@@ -1,7 +1,37 @@
-import heroBanner from "../assets/hero-banner.png";
 import { DrinkItem } from "../components/widgets/DrinkItem";
+
+import heroBanner from "../assets/hero-banner.png";
+
 import { drinksData } from "../data/drinks-data";
-import { ShoppingCartIcon } from "../shared/icons";
+import {
+  CoffeeIcon,
+  PackageIcon,
+  ShoppingCartIcon,
+  TimerIcon,
+} from "../shared/icons";
+
+const FEATURES_HERO_LIST = [
+  {
+    Icon: ShoppingCartIcon,
+    content: "Compra simples e segura",
+    bgColor: "yellow-700",
+  },
+  {
+    Icon: PackageIcon,
+    content: "Embalagem mantém o café intacto",
+    bgColor: "gray-700",
+  },
+  {
+    Icon: TimerIcon,
+    content: "Entrega rápida e rastreada",
+    bgColor: "yellow-500",
+  },
+  {
+    Icon: CoffeeIcon,
+    content: "O café chega fresquinho até você",
+    bgColor: "purple-500",
+  },
+];
 
 export function Home() {
   return (
@@ -17,10 +47,17 @@ export function Home() {
               qualquer hora
             </p>
             <ul className="mt-16 grid grid-cols-2 gap-x-10 gap-y-5">
-              <li>Compra simples e segura</li>
-              <li>Embalagem mantém o café intacto</li>
-              <li>Entrega rápida e rastreada</li>
-              <li>O café chega fresquinho até você</li>
+              {FEATURES_HERO_LIST.map((item) => (
+                <li className="flex items-center gap-3">
+                  <div
+                    className={`flex items-center justify-center w-[32px] h-[32px] text-white rounded-full bg-${item.bgColor}`}
+                  >
+                    <item.Icon size={16} weight="fill" />
+                  </div>
+
+                  {item.content}
+                </li>
+              ))}
             </ul>
           </div>
 

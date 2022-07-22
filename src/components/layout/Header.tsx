@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logoImage from "../../assets/logo.svg";
 import { MapPinIcon, ShoppingCartIcon } from "../../shared/icons";
 
@@ -24,11 +25,13 @@ export function Header() {
               title="Carrinho"
               className="w-[38px] h-[38px] rounded-md flex items-center justify-center bg-yellow-100 cursor-pointer "
             >
-              <ShoppingCartIcon
-                size={22}
-                weight="fill"
-                className="text-yellow-500"
-              />
+              <Link to="/checkout">
+                <ShoppingCartIcon
+                  size={22}
+                  weight="fill"
+                  className="text-yellow-500"
+                />
+              </Link>
             </li>
           </ul>
         </nav>
