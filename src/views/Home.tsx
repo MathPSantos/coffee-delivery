@@ -8,7 +8,7 @@ export function Home() {
       <section className="w-full px-4 bg-blur">
         <div className="py-[92px] mx-auto max-w-container flex items-center justify-between gap-14">
           <div>
-            <h1 className="text-5xl leading-snug">
+            <h1 className="text-5xl leading-snug font-extrabold">
               Encontre o café perfeito para qualquer hora do dia
             </h1>
             <p className="text-xl leading-snug text-gray-800 mt-4">
@@ -32,7 +32,9 @@ export function Home() {
 
       <section className="w-full px-4">
         <div className="py-8 mx-auto max-w-container">
-          <h2>Nossos cafés</h2>
+          <h2 className="text-gray-800 text-[32px] leading-snug font-extrabold">
+            Nossos cafés
+          </h2>
 
           <div className="flex items-start gap-x-8 gap-y-10 flex-wrap mt-[54px]">
             {drinksData.map((drink) => (
