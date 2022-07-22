@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{tsx,jsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        blur: "url(/src/assets/blur-bg.png)",
+      },
       colors: {
         yellow: {
           100: "#f1e9c9",
@@ -23,16 +26,16 @@ module.exports = {
           700: "#574f4d",
           800: "#403937",
           900: "#272221",
-        }
+        },
       },
       fontFamily: {
         sans: "Roboto, sans-serif",
         display: "'Baloo 2', cursive",
       },
       maxWidth: {
-        "container": "1120px"
-      }
+        container: "1120px",
+      },
     },
   },
   plugins: [],
-}
+};
