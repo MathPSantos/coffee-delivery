@@ -28,6 +28,9 @@ module.exports = {
       fontFamily: {
         sans: "Roboto, sans-serif",
         display: "'Baloo 2', cursive",
+      },
+      maxWidth: {
+        "container": "1120px"
       }
     },
   },
